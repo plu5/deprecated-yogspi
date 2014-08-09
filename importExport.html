@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Watched Videos - yogspi</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+    <div id="sidebar">
+        <div class="wrapper-dropdown wrapper-dropdown-current"><a href="importExport.html" id="watchedList" class="link">Import / Export</a></div>
+        <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
+        <a href="index2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
+        <a href="index3.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
+        <a href="index4.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sips</div></a>
+        <a href="index5.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sjin</div></a>
+        <a href="index6.html"><div class="wrapper-dropdown wrapper-dropdown-1">Rythian</div></a>
+        <a href="index7.html"><div class="wrapper-dropdown wrapper-dropdown-1">Nilesy</div></a>
+        <a href="index8.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
+        <a href="index9.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
+        <a href="index10.html"><div class="wrapper-dropdown wrapper-dropdown-1">Panda</div></a>
+        <a href="index11.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
+    </div>
+    <div id="wrapper">
+        <h2 class="title">Import:</h2><p class="subtle-text">Drag and drop JSON file or browse your machine.</p>
+        <div class="dnd">
+            <input type="file" id="fileinput" onchange="importBtn(this)">
+        </div><br />
+        <h2 class="title">Export:</h2>
+        <div id="export"></div><button id="export-btn" onclick="exportBtn();">Export</button></div>
+    </div>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="jquery.cookie.js"></script>
+<script src="FileSaver.js"></script>
+<script src="sand.js"></script>
+</body>
+</html>

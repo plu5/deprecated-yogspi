@@ -1,0 +1,254 @@
+.wbtn {
+    background-image: url(img/watched1.png);
+    width: 26px;
+    height: 50px;
+    border: none;
+    float: right;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wbtn-add {
+    background-image: url(img/watched2.png);
+    border: none;
+}
+
+.wbtn-selected {
+    background-image: url(img/watched3.png);
+}
+
+.wbtn-remove {
+    background-image: url(img/watched4.png);
+}
+
+.v-title {
+    font-family: Oswald;
+    font-size: 30px;
+    margin-top: 0;
+    height: 45px;
+    overflow: hidden;
+}
+
+.v-url {
+    color: #b71b16;
+}
+
+.v-date {
+    float: right;
+    font-family: Consolas, Arial;
+    font-size: 10px;
+    font-style: italic;
+    margin-top: 32px;
+    margin-right: -15em;
+}
+
+.v-desc {
+    font-family: Oswald;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: -35px;
+    height: 77px;
+    overflow: hidden;
+}
+
+.v-wrapper {
+    background: lightgrey;
+    height: 120px;
+    min-width: 650px;
+    margin-bottom: 10px;
+}
+
+.thumb {
+    float: right;
+    margin-right: 0.9em;
+    margin-top: 0.9em;
+    border: 1px dashed #fff;
+    padding: 2px;
+    background-color: #b71b16;
+}
+
+#btn-container {
+    text-align: center;
+    background: grey;
+    font-family: Consolas;
+    font-size: 14px;
+    min-width: 300px;
+}
+
+#btn-container a {
+    text-decoration: none;
+    color: white;
+}
+
+#btn-container a:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px black;
+}
+
+#pageNum {
+    background-color: #444;
+    color: white;
+    border: 1px dashed black;
+    cursor: pointer;
+}
+
+#container {
+    padding-left: 200px;
+    position: relative;
+}
+
+#sidebar {
+    background: #444;
+    position: absolute;
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    /*right: 80.2%;*/
+    /*left: 20.5%;*/
+    margin-left: -200px;
+    width: 192px;
+    height: 100%;
+}
+
+#sidebar a {
+    text-decoration: none;
+}
+
+.wrapper-dropdown {
+    position: relative;
+    width: 150px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #b71b16;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 5px;
+}
+
+.wrapper-dropdown:hover {
+    background: red;
+}
+
+.wrapper-dropdown a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.wrapper-dropdown-1 {
+    position: relative;
+    width: 150px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #b71b16;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 5px;
+}
+
+.wrapper-dropdown-1:hover {
+    background: red;
+}
+
+.wrapper-dropdown-1:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent #fff;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    position: absolute;
+    top: 61%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    font-weight: normal;
+    opacity: 0;
+    pointer-events: none;
+    list-style: none;
+}
+
+.wrapper-dropdown-1 .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #b71b16;
+    padding: 10px 10px;
+    margin-left: -40px;
+}
+
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #d4d4d4;
+}
+
+.wrapper-dropdown-1.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+    height: 59.5em;
+}
+
+.wrapper-dropdown-1.active:after {
+    border-color: #b71b16 transparent;
+    border-width: 6px 6px 0 6px;
+    margin-top: -3px;
+}
+
+.wrapper-dropdown-1.active {
+    background: #b71b16;
+    background: linear-gradient(to right, #b71b16 0%, #b71b16 78%, #ffffff 78%, #ffffff 100%);
+}
+
+.wrapper-dropdown-current {
+    background: black;
+}
+
+.up {
+    position:fixed;
+    top: 0px;
+    left: 19px;
+}
+
+.dnd {
+    border: 3px dashed red;
+    border-radius: 5px;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    min-width: 200px;
+    font-family: Consolas;
+}
+.dnd:hover {background: #d4d4d4;}
+.dnd p {text-align: center;margin-top:90px; color:grey;}
+.subtle-text {color: grey; font-family: Consolas; font-style: italic;font-size:14px;}
+#fileinput {font-family:Consolas;margin: 0 auto;display:inline-block;
+    height: 100%;
+    width: 100%;
+}
+h2 {font-family: Consolas;}
+#export-btn {position: relative;
+    font-family: calibri;
+    width: 150px;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px dashed #BBB;
+    text-align: center;
+    background-color: #DDD;
+    cursor:pointer;}
+
+.imported {
+    border: 3px dashed green;
+    border-radius: 5px;
+}
