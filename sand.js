@@ -5,9 +5,6 @@ var isUploads = true;
 var sPath = window.location.pathname;
 var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
 switch (sPage) {
-    case "index.html":
-        channelId = channelIds[0];
-        break;
     case "index2.html":
         channelId = channelIds[1];
         break;
@@ -37,6 +34,10 @@ switch (sPage) {
         break;
     case "index11.html":
         channelId = channelIds[10];
+        break;
+	case "index.html":
+	default:
+        channelId = channelIds[0];
         break;
 }
 var playlistId, nextPageToken, prevPageToken;
@@ -70,8 +71,8 @@ $(document).on('click', '.wbtn', function() {
 
 function load() {
     if(sPage != "importExport.html") {
-        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk');
-        gapi.client.load('youtube', 'v3', makeRequest); //make request might need to go
+        gapi.client.setApiKey('AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A');
+        gapi.client.load('youtube', 'v3', makeRequest);
     }
 }
 
