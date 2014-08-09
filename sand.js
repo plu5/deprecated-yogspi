@@ -126,6 +126,7 @@ function last() {
     $('.v-wrapper').remove();
     switch (sPage) {
         case "index.html":
+		default:
             requestVideoPlaylist(playlistId, 'CL4VEAA');
             break;
         case "index2.html":
