@@ -162,7 +162,7 @@ function last() {
         case "index11.html":
             requestVideoPlaylist(playlistId, 'CGQQAA');
             break;
-		case "index12.html";
+		case "index12.html":
 			requestVideoPlaylist(playlistId, 'CJYBEAA');
 			break;
     }
