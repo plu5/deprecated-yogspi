@@ -36,8 +36,8 @@ switch (sPage) {
         channelId = channelIds[10];
         break;
 	case "index12.html":
-		channelId = channelIds[11];
-		break;
+        channelId = channelIds[11];
+        break;
 	case "index.html":
 	default:
         channelId = channelIds[0];
@@ -162,6 +162,9 @@ function last() {
         case "index11.html":
             requestVideoPlaylist(playlistId, 'CGQQAA');
             break;
+		case "index12.html";
+			requestVideoPlaylist(playlistId, 'CJYBEAA');
+			break;
     }
 }
 function nextPage() {
