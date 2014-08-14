@@ -37,6 +37,7 @@ switch (sPage) {
         break;
 	case "index12.html":
 		channelId = channelIds[11];
+		break;
 	case "index.html":
 	default:
         channelId = channelIds[0];
