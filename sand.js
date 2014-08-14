@@ -1,5 +1,5 @@
 var watchedList = [];
-var channelIds = ['UCH-_hzb2ILSCo9ftVSnrCIQ', 'UCj_dHQWv08dQ0fv6IrzTChQ', 'UCs4br3aZLU0sOEM-3n0-6xQ', 'UCD4INvKvy83OXwAkRjaQKtw', 'UCpu8dLHavjMi1a5jgT9ycMA', 'UCQd82ZrlW8b8_MujwDO9ajw', 'UCsLTG-svFzsK22zFac0pwUA', 'UCUxoapwoGN9cKN5SPKGVh7A', 'UCYzUOg9p-Z_1o_e-Ua4-VHQ', 'UCkcdIHabg9Sq0sD6ITyVQcg', 'UCVk6LHxQ4TnHySEd0e6143g'];
+var channelIds = ['UCH-_hzb2ILSCo9ftVSnrCIQ', 'UCj_dHQWv08dQ0fv6IrzTChQ', 'UCs4br3aZLU0sOEM-3n0-6xQ', 'UCD4INvKvy83OXwAkRjaQKtw', 'UCpu8dLHavjMi1a5jgT9ycMA', 'UCQd82ZrlW8b8_MujwDO9ajw', 'UCsLTG-svFzsK22zFac0pwUA', 'UCUxoapwoGN9cKN5SPKGVh7A', 'UCYzUOg9p-Z_1o_e-Ua4-VHQ', 'UCkcdIHabg9Sq0sD6ITyVQcg', 'UCVk6LHxQ4TnHySEd0e6143g', 'UCaGWSIZnljlgNTSMzYnxTEg'];
 var channelId;
 var isUploads = true;
 var sPath = window.location.pathname;
@@ -35,6 +35,8 @@ switch (sPage) {
     case "index11.html":
         channelId = channelIds[10];
         break;
+	case "index12.html":
+		channelId = channelIds[11];
 	case "index.html":
 	default:
         channelId = channelIds[0];
