@@ -44,7 +44,7 @@ switch (sPage) {
         break;
 }
 var playlistId, nextPageToken, prevPageToken;
-if($.cookie('watchedList') != null) watchedList = JSON.parse($.cookie('watchedList'));
+if(localStorage['watchedList'] != null) watchedList = JSON.parse(localStorage['watchedList']);
 
 $(document).on('mouseenter', '.wbtn', function() {
     if ($(this).hasClass('wbtn-selected')) {
@@ -64,11 +64,11 @@ $(document).on('click', '.wbtn', function() {
         if (i != -1) {
             watchedList.splice(i, 1);
         }
-        $.cookie('watchedList', JSON.stringify(watchedList), { expires: 1000, path: '/' });
+        localStorage['watchedList'] = JSON.stringify(watchedList);
     } else {
         $(this).addClass('wbtn-selected');
         watchedList.push($(this).attr("value"));
-        $.cookie('watchedList', JSON.stringify(watchedList), { expires: 1000, path: '/' });
+        localStorage['watchedList'] = JSON.stringify(watchedList);
     }
 })
 
@@ -229,7 +229,7 @@ function importBtn(file) {
         reader.onload = function (e) {
             var output=e.target.result;
             if(file.files[0].name == "watchedList.json"){
-                $.cookie('watchedList', output, { expires: 1000, path: '/' });
+                localStorage['watchedList'] = output;
                 $('.dnd').addClass('imported');
             } else {alert("Error: not a valid file.")};
         };
@@ -237,7 +237,7 @@ function importBtn(file) {
     }
 }
 function exportBtn() {
-    var blob = new Blob([$.cookie('watchedList')], {type: "text/json;charset=utf-8"});
+    var blob = new Blob([localStorage['watchedList']], {type: "text/json;charset=utf-8"});
     saveAs(blob, "watchedList.json");
 }
 
