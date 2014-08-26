@@ -86,7 +86,7 @@
 }
 
 #pageNum {
-    background-color: white;
+    background-color: #444;
     color: white;
     border: 1px dashed black;
     cursor: pointer;
@@ -98,7 +98,7 @@
 }
 
 #sidebar {
-    background: #444;
+    background: white;
     position: absolute;
     position: fixed !important;
     top: 0;
