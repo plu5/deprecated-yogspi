@@ -209,6 +209,8 @@
 .wrapper-dropdown-1.active {
     background: #b71b16;
     background: linear-gradient(to right, #b71b16 0%, #b71b16 78%, #ffffff 78%, #ffffff 100%);
+	position: absolute;
+	z-index: 2;
 }
 
 .wrapper-dropdown-current {
