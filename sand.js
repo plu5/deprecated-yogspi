@@ -5,6 +5,9 @@ var isUploads = true;
 var sPath = window.location.pathname;
 var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
 switch (sPage) {
+	case "importExport.html":
+        $('#vidNum').append("You currently have " + JSON.parse(localStorage['watchedList']).length + " videos in your watched list.");
+        break;
     case "index2.html":
         channelId = channelIds[1];
         break;
