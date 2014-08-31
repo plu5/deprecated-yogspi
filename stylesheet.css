@@ -131,10 +131,12 @@
     font-weight: bold;
     margin-top: 13px;
     margin-bottom: 5px;
+	border-bottom: 4px solid grey;
 }
 
 .wrapper-dropdown:hover {
     background: red;
+	border-bottom: 4px solid black;
 }
 
 .wrapper-dropdown a {
@@ -154,10 +156,12 @@
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 5px;
+	border-bottom: 4px solid grey;
 }
 
 .wrapper-dropdown-1:hover {
     background: red;
+	border-bottom: 4px solid black;
 }
 
 .wrapper-dropdown-1:after {
