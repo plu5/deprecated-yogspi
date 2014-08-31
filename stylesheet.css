@@ -52,19 +52,23 @@
 }
 
 .v-wrapper {
-    background: lightgrey;
+    background: white;
     height: 120px;
     min-width: 650px;
     margin-bottom: 10px;
+}
+
+.v-wrapper:hover {
+	background: lightgrey;
 }
 
 .thumb {
     float: right;
     margin-right: 0.9em;
     margin-top: 0.9em;
-    border: 1px dashed #fff;
+	border: 1px solid grey;
     padding: 2px;
-    background-color: #b71b16;
+    background-color: white;
 }
 
 #btn-container {
