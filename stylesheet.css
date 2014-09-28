@@ -279,7 +279,7 @@ table {
     height: 100%;
     width: 100%;
 }
-h2 {font-family: Consolas; font-size: 20px; margin-bottom: 5px;}
+h2 {font-family: Consolas; font-size: 20px; padding: 5px;}
 #export-btn {position: relative;
     font-family: calibri;
     width: 150px;
