@@ -218,8 +218,9 @@ table {
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
+    background: #fafafa;
     font-weight: normal;
+    font-size: 14px;
     opacity: 0;
     pointer-events: none;
     list-style: none;
