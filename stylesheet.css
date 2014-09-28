@@ -120,7 +120,7 @@ table {
 #btn-container {
     text-align: center;
     background: grey;
-    font-family: Consolas;
+    font-family: Consolas, Arial;
     font-size: 14px;
     min-width: 300px;
 }
@@ -138,22 +138,20 @@ table {
 #pageNum {
     background-color: #444;
     color: white;
-    border: 1px dashed black;
-    cursor: pointer;
 }
 
 #container {
-    padding-left: 182px;
+    padding-left: 175px;
     position: relative;
 }
 
 #sidebar {
     position: absolute;
     position: fixed !important;
-    margin-left: -183px;
+    margin-left: -175px;
 	margin-top: -13px;
     width: 170px;
-    height: 100%;
+    height: 120%;
 }
 
 #sidebar a {
@@ -171,13 +169,10 @@ table {
     cursor: pointer;
     font-weight: bold;
     margin-top: 13px;
-    margin-bottom: 5px;
-	border-bottom: 4px solid grey;
 }
 
 .wrapper-dropdown:hover {
     background: red;
-	border-bottom: 4px solid black;
 }
 
 .wrapper-dropdown a {
@@ -196,13 +191,10 @@ table {
     cursor: pointer;
     font-weight: bold;
     margin-top: 0px;
-    margin-bottom: 5px;
-	border-bottom: 4px solid grey;
 }
 
 .wrapper-dropdown-1:hover {
     background: red;
-	border-bottom: 4px solid black;
 }
 
 .wrapper-dropdown-1:after {
