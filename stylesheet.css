@@ -122,15 +122,16 @@ table {
 
 #btn-container {
     text-align: center;
-    background: grey;
     font-family: Consolas, Arial;
     font-size: 14px;
     min-width: 300px;
+    border-left: 4px solid #a7a7a7;
+    border-right: 4px solid #a7a7a7;
 }
 
 #btn-container a {
     text-decoration: none;
-    color: white;
+    color: grey;
 }
 
 #btn-container a:hover {
