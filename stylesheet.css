@@ -1,3 +1,47 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 .wbtn {
     background-image: url(img/watched1.png);
     width: 26px;
@@ -26,7 +70,7 @@
     font-family: Oswald;
     font-size: 30px;
     margin-top: 0;
-    height: 45px;
+    height: 33px;
     overflow: hidden;
 }
 
@@ -39,16 +83,16 @@
     font-family: Consolas, Arial;
     font-size: 10px;
     font-style: italic;
-    margin-top: 32px;
-    margin-right: -15em;
+    margin-top: 73px;
+    margin-right: -20em;
 }
 
 .v-desc {
     font-family: Oswald;
     font-weight: 300;
     font-style: italic;
-    margin-top: -35px;
-    height: 77px;
+    height: 83px;
+    line-height: 130%;
     overflow: hidden;
 }
 
@@ -99,21 +143,16 @@
 }
 
 #container {
-    padding-left: 183px;
+    padding-left: 182px;
     position: relative;
 }
 
 #sidebar {
-    background: white;
     position: absolute;
     position: fixed !important;
-    top: 0;
-    bottom: 0;
-    /*right: 80.2%;*/
-    /*left: 20.5%;*/
-    margin-left: -193px;
-	margin-top: -5px;
-    width: 192px;
+    margin-left: -183px;
+	margin-top: -13px;
+    width: 170px;
     height: 100%;
 }
 
@@ -181,7 +220,7 @@
 
 .wrapper-dropdown-1 .dropdown {
     position: absolute;
-    top: 61%;
+    top: 100%;
     left: 0;
     right: 0;
     background: #fff;
@@ -196,7 +235,6 @@
     text-decoration: none;
     color: #b71b16;
     padding: 10px 10px;
-    margin-left: -40px;
 }
 
 .wrapper-dropdown-1 .dropdown li:hover a {
@@ -230,7 +268,6 @@
 .up {
     position:fixed;
     top: 13px;
-    left: 11px;
 }
 
 .dnd {
