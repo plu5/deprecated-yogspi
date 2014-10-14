@@ -15,29 +15,12 @@
                 <a href="#" id="prev-btn" class="page-btn" onclick="previousPage();">&lt;&lt;</a>
                 <a href="#" id="next-btn" class="page-btn" onclick="nextPage();">&gt;&gt;</a>
                 <select id="pageNum" onchange="SelectChanged(this)">
-                    <option value="" selected="selected">#</option>
-                    <option value="CPQDEAA">10</option>
-                    <option value="COgHEAA">20</option>
-                    <option value="CNwLEAA">30</option>
-                    <option value="CNAPEAA">40</option>
-                    <option value="CMQTEAA">50</option>
+                    <option value="" selected="selected" autocomplete="off">#</option>
                 </select>
                 <a href="#" id="last-btn" onclick="last();">&gt;&#124;</a>
             </div>
             <a href="importExport.html" id="watchedList" class="link"><div class="wrapper-dropdown">Import / Export</div></a>
-            <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
-                <span>Lewis & Simon</span>
-                <ul class="dropdown">
-                    <li><a href="index.html">Uploaded Videos</a></li>
-                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL3XZNMGhpynP4JM1ZQo5XHw-ID9MM3I50');">Hole Diggers</a></li>
-                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL3XZNMGhpynNuLYTwxKnZzKMTtj1Rpo4C');">Trucking Tuesday</a></li>
-                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL3XZNMGhpynNVSuiunnLtEhYx5aHKSXje');">YogLabs</a></li>
-                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL3XZNMGhpynMm0Ywj-rupAKwRryWzEQy-');">MoonQuest</a></li>
-                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL310728C6AAFF44B1');">Jaffa Factory</a></li>
-                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL3XZNMGhpynMWgn6IA6XEvKo_RR0c061-');">Voltz</a></li>
-                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLF60520313D07F366');">Shadow of Israphel</a></li>
-                </ul>
-            </div>
+            <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
             <a href="yogscast2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
             <a href="yogscastlalna.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
             <a href="yogscastsips.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sips</div></a>
@@ -47,8 +30,16 @@
             <a href="yogscastkim.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
             <a href="zoeyproasheck.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
             <a href="hybridpanda.html"><div class="wrapper-dropdown wrapper-dropdown-1">Panda</div></a>
-            <a href="yogscastturpster.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
-			<a href="tedhimself.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
+            <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
+                <span>Turpster</span>
+                <ul class="dropdown">
+                    <li><a href="yogscastturpster.html">Uploaded Videos</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLhUkDQmNfIv6Q-DhLTKKGg8xSMACWGOXZ');">Modded Skyrim</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLhUkDQmNfIv4jl9KI7ba3ufCd_xEUMOFP');">Yogs on Tour</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLhUkDQmNfIv7SkZcgT5K21e6tptmLLERr');">YogTours</a></li>
+                </ul>
+            </div>
+            <a href="tedhimself.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
         </div>
         <div id="wrapper"></div>
     </div>

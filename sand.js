@@ -8,37 +8,37 @@ switch (sPage) {
 	case "importExport.html":
         $('#vidNum').append("You currently have " + JSON.parse(localStorage['watchedList']).length + " videos in your watched list.");
         break;
-    case "index2.html":
+    case "yogscast2.html":
         channelId = channelIds[1];
         break;
-    case "index3.html":
+    case "yogscastlalna.html":
         channelId = channelIds[2];
         break;
-    case "index4.html":
+    case "yogscastsips.html":
         channelId = channelIds[3];
         break;
-    case "index5.html":
+    case "yogscastsjin.html":
         channelId = channelIds[4];
         break;
-    case "index6.html":
+    case "yogscastrythian.html":
         channelId = channelIds[5];
         break;
-    case "index7.html":
+    case "nilesyrocks.html":
         channelId = channelIds[6];
         break;
-    case "index8.html":
+    case "yogscastkim.html":
         channelId = channelIds[7];
         break;
-    case "index9.html":
+    case "zoeyproasheck.html":
         channelId = channelIds[8];
         break;
-    case "index10.html":
+    case "hybridpanda.html":
         channelId = channelIds[9];
         break;
-    case "index11.html":
+    case "yogscastturpster.html":
         channelId = channelIds[10];
         break;
-	case "index12.html":
+	case "tedhimself.html":
         channelId = channelIds[11];
         break;
 	case "index.html":
@@ -77,7 +77,7 @@ $(document).on('click', '.wbtn', function() {
 
 function load() {
     if(sPage != "importExport.html") {
-        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk');
+        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk'/*'AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk'*/);
         gapi.client.load('youtube', 'v3', makeRequest);
     }
 }
@@ -135,37 +135,37 @@ function last() {
 		default:
             requestVideoPlaylist(playlistId, 'CL4VEAA');
             break;
-        case "index2.html":
+        case "yogscast2.html":
             requestVideoPlaylist(playlistId, 'CPIMEAA');
             break;
-        case "index3.html":
+        case "yogscastlalna.html":
             requestVideoPlaylist(playlistId, 'CKAGEAA');
             break;
-        case "index4.html":
+        case "yogscastsips.html":
             requestVideoPlaylist(playlistId, 'CP4IEAA');
             break;
-        case "index5.html":
+        case "yogscastsjin.html":
             requestVideoPlaylist(playlistId, 'CKAGEAA');
             break;
-        case "index6.html":
+        case "yogscastrythian.html":
             requestVideoPlaylist(playlistId, 'CKAGEAA');
             break;
-        case "index7.html":
+        case "nilesyrocks.html":
             requestVideoPlaylist(playlistId, 'CIQHEAA');
             break;
-        case "index8.html":
+        case "yogscastkim.html":
             requestVideoPlaylist(playlistId, 'CN4CEAA');
             break;
-        case "index9.html":
+        case "zoeyproasheck.html":
             requestVideoPlaylist(playlistId, 'CPoBEAA');
             break;
-        case "index10.html":
+        case "hybridpanda.html":
             requestVideoPlaylist(playlistId, 'CPgKEAA');
             break;
-        case "index11.html":
+        case "yogscastturpster.html":
             requestVideoPlaylist(playlistId, 'CGQQAA');
             break;
-		case "index12.html":
+		case "tedhimself.html":
 			requestVideoPlaylist(playlistId, 'CJYBEAA');
 			break;
     }
