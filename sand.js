@@ -77,7 +77,7 @@ $(document).on('click', '.wbtn', function() {
 
 function load() {
     if(sPage != "importExport.html") {
-        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk'/*'AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk'*/);
+        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk');
         gapi.client.load('youtube', 'v3', makeRequest);
     }
 }
