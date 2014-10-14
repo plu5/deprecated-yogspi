@@ -5,51 +5,53 @@
     <title>yogspi</title>
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type="text/css">
+    <link href="perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="container">
-    <div id="sidebar">
-        <a href="importExport.html" id="watchedList" class="link"><div class="wrapper-dropdown">Import / Export</div></a>
-        <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
-        <a href="index2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
-        <a href="index3.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
-        <a href="index4.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sips</div></a>
-        <a href="index5.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sjin</div></a>
-        <a href="index6.html"><div class="wrapper-dropdown wrapper-dropdown-1">Rythian</div></a>
-        <a href="index7.html"><div class="wrapper-dropdown wrapper-dropdown-1">Nilesy</div></a>
-        <a href="index8.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
-        <a href="index9.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
-        <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
-            <span>Panda</span>
-            <ul class="dropdown">
-                <li><a href="index10.html">Uploaded Videos</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknCy8EZpG3ltYkLymek-r4R4');">Unturned</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknB_xVzd0GrwUmMOpQAp6Y6D');">Rufus Daily Treats</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknB9QpVyW_C-5820MZ-wOIJ7');">Yogcraft</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknCSbbn43Iot2TN7Q_1lx7FU');">Dead Space 3 w/Nilesy</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknCyt0H1_Fgl-AowgImv4-zB');">XCOM Ironman</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLE554D72605BFDBE7');">Sleeping Dogs</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLB8B07F0749D1E498');">DayZ</a></li>
-            </ul>
+    <div id="container">
+        <div id="sidebar">
+            <div id="btn-container">
+                <a href="#" id="first-btn" onclick="first();">&#124;&lt;</a>
+                <a href="#" id="prev-btn" class="page-btn" onclick="previousPage();">&lt;&lt;</a>
+                <a href="#" id="next-btn" class="page-btn" onclick="nextPage();">&gt;&gt;</a>
+                <select id="pageNum" onchange="SelectChanged(this)">
+                    <option value="" selected="selected" autocomplete="off">#</option>
+                    <option value="CPQDEAA" autocomplete="off">10</option>
+                    <option value="COgHEAA" autocomplete="off">20</option>
+                </select>
+                <a href="#" id="last-btn" onclick="last();">&gt;&#124;</a>
+            </div>
+            <a href="importExport.html" id="watchedList" class="link"><div class="wrapper-dropdown">Import / Export</div></a>
+            <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
+            <a href="index2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
+            <a href="index3.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
+            <a href="index4.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sips</div></a>
+            <a href="index5.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sjin</div></a>
+            <a href="index6.html"><div class="wrapper-dropdown wrapper-dropdown-1">Rythian</div></a>
+            <a href="index7.html"><div class="wrapper-dropdown wrapper-dropdown-1">Nilesy</div></a>
+            <a href="index8.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
+            <a href="index9.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
+            <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
+                <span>Panda</span>
+                <ul class="dropdown">
+                    <li><a href="index10.html">Uploaded Videos</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknCy8EZpG3ltYkLymek-r4R4');">Unturned</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknB_xVzd0GrwUmMOpQAp6Y6D');">Rufus Daily Treats</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknB9QpVyW_C-5820MZ-wOIJ7');">Yogcraft</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknCSbbn43Iot2TN7Q_1lx7FU');">Dead Space 3 w/Nilesy</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLihxUgpxYknCyt0H1_Fgl-AowgImv4-zB');">XCOM Ironman</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLE554D72605BFDBE7');">Sleeping Dogs</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLB8B07F0749D1E498');">DayZ</a></li>
+                </ul>
+            </div>
+            <a href="index11.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
+            <a href="index12.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
         </div>
-        <a href="index11.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
-		<a href="index12.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
+        <div id="wrapper"></div>
     </div>
-    <div id="btn-container">
-        <a href="#" id="first-btn" onclick="first();">First</a>
-        <a href="#" id="prev-btn" class="page-btn" onclick="previousPage();">&lt;&lt;</a>
-        <a href="#" id="next-btn" class="page-btn" onclick="nextPage();">&gt;&gt;</a>
-        <select id="pageNum" onchange="SelectChanged(this)">
-            <option value="" selected="selected" autocomplete="off">#</option>
-            <option value="CPQDEAA" autocomplete="off">10</option>
-            <option value="COgHEAA" autocomplete="off">20</option>
-        </select>
-        <a href="#" id="last-btn" onclick="last();">Last (probably)</a>
-    </div>
-    <div id="wrapper"></div>
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="sand.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=load"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="perfect-scrollbar.min.js"></script>
+    <script src="sand.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=load"></script>
 </body>
 </html>

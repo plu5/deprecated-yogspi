@@ -5,56 +5,58 @@
     <title>yogspi</title>
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type="text/css">
+    <link href="perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="container">
-    <div id="sidebar">
-        <a href="importExport.html" id="watchedList" class="link"><div class="wrapper-dropdown">Import / Export</div></a>
-        <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
-        <a href="index2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
-        <a href="index3.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
-        <a href="index4.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sips</div></a>
-        <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
-            <span>Sjin</span>
-            <ul class="dropdown">
-                <li><a href="index5.html">Uploaded Videos</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfDWTjpQUE5WkMolboDfuiIZ');">Fun Friendly Building Challenge</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCZAdtFVLleVh0H7kB5OGhC');">Magic Police</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfAhxBlEDdBrTq1GZu0-U9-r');">Sjin's Farm</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCefbBrRUmN1bT8YdOPBLwN');">Sjintech Space Rescue</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfDa8-JSDTjQJqJZdPdwYTFx');">Chaosville w/Duncan</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfDVxPClU3r7HvdpGz3lKLDR');">Sipsco Space Program</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCGdGyz4XohANw3m9UohwVg');">Dirt Factory</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfAwR3PTj3Rgz_DvRwsYUCUj');">Skyblock w/Duncan</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCOPQgSfPoCWh1tgUh5f_xw');">Feed The World</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCI5DVbdXg_h0Uc93ELKJgc');">Voltz</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLE7A681307D4F077D');">Sipsco</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfBS0t_9k1W7Fma81X3os7YN');">Ninjas</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PL153D3989CF87E9EF');">Spacemen</a></li>
-            </ul>
+    <div id="container">
+        <div id="sidebar">
+            <div id="btn-container">
+                <a href="#" id="first-btn" onclick="first();">&#124;&lt;</a>
+                <a href="#" id="prev-btn" class="page-btn" onclick="previousPage();">&lt;&lt;</a>
+                <a href="#" id="next-btn" class="page-btn" onclick="nextPage();">&gt;&gt;</a>
+                <select id="pageNum" onchange="SelectChanged(this)">
+                    <option value="" selected="selected" autocomplete="off">#</option>
+                    <option value="CPQDEAA" autocomplete="off">10</option>
+                </select>
+                <a href="#" id="last-btn" onclick="last();">&gt;&#124;</a>
+            </div>
+            <a href="importExport.html" id="watchedList" class="link"><div class="wrapper-dropdown">Import / Export</div></a>
+            <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
+            <a href="index2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
+            <a href="index3.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
+            <a href="index4.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sips</div></a>
+            <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
+                <span>Sjin</span>
+                <ul class="dropdown">
+                    <li><a href="index5.html">Uploaded Videos</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfDWTjpQUE5WkMolboDfuiIZ');">Fun Friendly Building Challenge</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCZAdtFVLleVh0H7kB5OGhC');">Magic Police</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfAhxBlEDdBrTq1GZu0-U9-r');">Sjin's Farm</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCefbBrRUmN1bT8YdOPBLwN');">Sjintech Space Rescue</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfDa8-JSDTjQJqJZdPdwYTFx');">Chaosville w/Duncan</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfDVxPClU3r7HvdpGz3lKLDR');">Sipsco Space Program</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCGdGyz4XohANw3m9UohwVg');">Dirt Factory</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfAwR3PTj3Rgz_DvRwsYUCUj');">Skyblock w/Duncan</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCOPQgSfPoCWh1tgUh5f_xw');">Feed The World</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfCI5DVbdXg_h0Uc93ELKJgc');">Voltz</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLE7A681307D4F077D');">Sipsco</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLtZHIFR5osfBS0t_9k1W7Fma81X3os7YN');">Ninjas</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL153D3989CF87E9EF');">Spacemen</a></li>
+                </ul>
+            </div>
+            <a href="index6.html"><div class="wrapper-dropdown wrapper-dropdown-1">Rythian</div></a>
+            <a href="index7.html"><div class="wrapper-dropdown wrapper-dropdown-1">Nilesy</div></a>
+            <a href="index8.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
+            <a href="index9.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
+            <a href="index10.html"><div class="wrapper-dropdown wrapper-dropdown-1">Panda</div></a>
+            <a href="index11.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
+            <a href="index12.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
         </div>
-        <a href="index6.html"><div class="wrapper-dropdown wrapper-dropdown-1">Rythian</div></a>
-        <a href="index7.html"><div class="wrapper-dropdown wrapper-dropdown-1">Nilesy</div></a>
-        <a href="index8.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
-        <a href="index9.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
-        <a href="index10.html"><div class="wrapper-dropdown wrapper-dropdown-1">Panda</div></a>
-        <a href="index11.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
-		<a href="index12.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
+        <div id="wrapper"></div>
     </div>
-    <div id="btn-container">
-        <a href="#" id="first-btn" onclick="first();">First</a>
-        <a href="#" id="prev-btn" class="page-btn" onclick="previousPage();">&lt;&lt;</a>
-        <a href="#" id="next-btn" class="page-btn" onclick="nextPage();">&gt;&gt;</a>
-        <select id="pageNum" onchange="SelectChanged(this)">
-            <option value="" selected="selected" autocomplete="off">#</option>
-            <option value="CPQDEAA" autocomplete="off">10</option>
-        </select>
-        <a href="#" id="last-btn" onclick="last();">Last (probably)</a>
-    </div>
-    <div id="wrapper"></div>
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="sand.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=load"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="perfect-scrollbar.min.js"></script>
+    <script src="sand.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=load"></script>
 </body>
 </html>

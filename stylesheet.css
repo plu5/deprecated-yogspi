@@ -52,7 +52,7 @@ table {
     border: none;
     float: right;
     margin-right: 20px;
-    margin-top: -5px;
+    margin-top: -9.5px;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -104,7 +104,9 @@ table {
     height: 120px;
     min-width: 650px;
     margin-bottom: 6px;
+    margin-top: 6px;
     border-top: 3px solid #a7a7a7;
+    padding: 5px;
 }
 
 .v-wrapper:hover {
@@ -122,10 +124,9 @@ table {
 
 #btn-container {
     text-align: center;
-    background: grey;
+    background: #b71b16;
     font-family: Consolas, Arial;
     font-size: 14px;
-    min-width: 300px;
 }
 
 #btn-container a {
@@ -134,13 +135,7 @@ table {
 }
 
 #btn-container a:hover {
-    text-decoration: underline;
-    text-shadow: 1px 1px black;
-}
-
-#pageNum {
-    background-color: #444;
-    color: white;
+    font-weight: bold;
 }
 
 #container {
@@ -152,7 +147,7 @@ table {
     position: absolute;
     position: fixed !important;
     margin-left: -175px;
-	margin-top: -13px;
+	margin-top: 0px;
     width: 170px;
     height: 120%;
 }
@@ -171,7 +166,6 @@ table {
     outline: none;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 13px;
 }
 
 .wrapper-dropdown:hover {
@@ -193,7 +187,6 @@ table {
     outline: none;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 0px;
 }
 
 .wrapper-dropdown-1:hover {
@@ -241,7 +234,13 @@ table {
     opacity: 1;
     pointer-events: auto;
     z-index: 1;
-    height: 59.5em;
+    margin-left: 170px;
+    width: 170px;
+    border-left: 5px solid black;
+    /*position: fixed;*/
+    top: 0px;
+    max-height: 400px;
+    overflow:hidden;
 }
 
 .wrapper-dropdown-1.active:after {
@@ -252,17 +251,12 @@ table {
 
 .wrapper-dropdown-1.active {
     background: black;
-	position: absolute;
+	/*position: absolute;*/
 	z-index: 2;
 }
 
 .wrapper-dropdown-current {
     background: black;
-}
-
-.up {
-    position:fixed;
-    top: 13px;
 }
 
 .dnd {

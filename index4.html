@@ -5,62 +5,64 @@
     <title>yogspi</title>
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type="text/css">
+    <link href="perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="container">
-    <div id="sidebar">
-        <a href="importExport.html" id="watchedList" class="link"><div class="wrapper-dropdown">Import / Export</div></a>
-        <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
-        <a href="index2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
-        <a href="index3.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
-        <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
-            <span>Sips</span>
-            <ul class="dropdown">
-                <li><a href="index4.html">Uploaded Videos</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZL2RWItGNW7l18HVw7X3XeE');">Dirt Quest</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZK_P9OCZa_ULm0TZWxg3jZu');">Sipsco Space Program</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKTeWvBuhsN_d0EyBcgvKjs');">Sipsco Dirt Factory</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PL0B7E58C6AE7CD2CB');">Sipsco</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZK8Zqi-S_pRECy5a63KTfzt');">Sip Plays Skyblock</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZI5RKuc4PJPwZzTaINMUTBI');">Garry's Mod Murder</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKq9RzbG3m8vuoITZ0PHu_7');">Garry's Mod TTT</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZLUpVdZiOMdGUl7ksGCgOos');">Garry's Mod Prop Hunt</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZJV8_-mQaoSO3JMNi9IFKh4');">Don't Starve: Woodie</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZLzp5veg5f3oWg9ZjaGG3kk');">Don't Starve</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZINwOn7kW3ajfE8ryvXKH0X');">Best of Sips Animated</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZL6ghzLrBf2Spz4aFPkbBRq');">Squires</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLE1A82EDDF3DC15D3');">Spacemen</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKiV9Ro0FNMe-GYD_U3-tiG');">Simcity</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZIVBsfjFdh6ZV7LOY1crUbo');">Skyblock w/HatFilms</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZIimAz-4jo3psFpP1xdcwCz');">Open TTD</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZLP2J9bf_o70yW6Q8wwI_4W');">Hotline Miami</a></li>
-                <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKaJd7k8WMbnSUF4bhA07mK');">Skyrim</a></li>
-            </ul>
+    <div id="container">
+        <div id="sidebar">
+            <div id="btn-container">
+                <a href="#" id="first-btn" onclick="first();">&#124;&lt;</a>
+                <a href="#" id="prev-btn" class="page-btn" onclick="previousPage();">&lt;&lt;</a>
+                <a href="#" id="next-btn" class="page-btn" onclick="nextPage();">&gt;&gt;</a>
+                <select id="pageNum" onchange="SelectChanged(this)">
+                    <option value="" selected="selected" autocomplete="off">#</option>
+                    <option value="CPQDEAA" autocomplete="off">10</option>
+                    <option value="COgHEAA" autocomplete="off">20</option>
+                </select>
+                <a href="#" id="last-btn" onclick="last();">&gt;&#124;</a>
+            </div>
+            <a href="importExport.html" id="watchedList" class="link"><div class="wrapper-dropdown">Import / Export</div></a>
+            <a href="index.html"><div class="wrapper-dropdown wrapper-dropdown-1">Lewis & Simon</div></a>
+            <a href="index2.html"><div class="wrapper-dropdown wrapper-dropdown-1">Hannah</div></a>
+            <a href="index3.html"><div class="wrapper-dropdown wrapper-dropdown-1">Duncan</div></a>
+            <div class="wrapper-dropdown-current dd wrapper-dropdown-1">
+                <span>Sips</span>
+                <ul class="dropdown">
+                    <li><a href="index4.html">Uploaded Videos</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZL2RWItGNW7l18HVw7X3XeE');">Dirt Quest</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZK_P9OCZa_ULm0TZWxg3jZu');">Sipsco Space Program</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKTeWvBuhsN_d0EyBcgvKjs');">Sipsco Dirt Factory</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PL0B7E58C6AE7CD2CB');">Sipsco</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZK8Zqi-S_pRECy5a63KTfzt');">Sip Plays Skyblock</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZI5RKuc4PJPwZzTaINMUTBI');">Garry's Mod Murder</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKq9RzbG3m8vuoITZ0PHu_7');">Garry's Mod TTT</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZLUpVdZiOMdGUl7ksGCgOos');">Garry's Mod Prop Hunt</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZJV8_-mQaoSO3JMNi9IFKh4');">Don't Starve: Woodie</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZLzp5veg5f3oWg9ZjaGG3kk');">Don't Starve</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZINwOn7kW3ajfE8ryvXKH0X');">Best of Sips Animated</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZL6ghzLrBf2Spz4aFPkbBRq');">Squires</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLE1A82EDDF3DC15D3');">Spacemen</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKiV9Ro0FNMe-GYD_U3-tiG');">Simcity</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZIVBsfjFdh6ZV7LOY1crUbo');">Skyblock w/HatFilms</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZIimAz-4jo3psFpP1xdcwCz');">Open TTD</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZLP2J9bf_o70yW6Q8wwI_4W');">Hotline Miami</a></li>
+                    <li><a href="#" onclick="isUploads = false; loadPlaylist('PLYqfXQ-ztmZKaJd7k8WMbnSUF4bhA07mK');">Skyrim</a></li>
+                </ul>
+            </div>
+            <a href="index5.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sjin</div></a>
+            <a href="index6.html"><div class="wrapper-dropdown wrapper-dropdown-1">Rythian</div></a>
+            <a href="index7.html"><div class="wrapper-dropdown wrapper-dropdown-1">Nilesy</div></a>
+            <a href="index8.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
+            <a href="index9.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
+            <a href="index10.html"><div class="wrapper-dropdown wrapper-dropdown-1">Panda</div></a>
+            <a href="index11.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
+            <a href="index12.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
         </div>
-        <a href="index5.html"><div class="wrapper-dropdown wrapper-dropdown-1">Sjin</div></a>
-        <a href="index6.html"><div class="wrapper-dropdown wrapper-dropdown-1">Rythian</div></a>
-        <a href="index7.html"><div class="wrapper-dropdown wrapper-dropdown-1">Nilesy</div></a>
-        <a href="index8.html"><div class="wrapper-dropdown wrapper-dropdown-1">Kim</div></a>
-        <a href="index9.html"><div class="wrapper-dropdown wrapper-dropdown-1">Zoey</div></a>
-        <a href="index10.html"><div class="wrapper-dropdown wrapper-dropdown-1">Panda</div></a>
-        <a href="index11.html"><div class="wrapper-dropdown wrapper-dropdown-1">Turpster</div></a>
-		<a href="index12.html"><div class="wrapper-dropdown wrapper-dropdown-1">PyrionFlax</div></a>
+        <div id="wrapper"></div>
     </div>
-    <div id="btn-container">
-        <a href="#" id="first-btn" onclick="first();">First</a>
-        <a href="#" id="prev-btn" class="page-btn" onclick="previousPage();">&lt;&lt;</a>
-        <a href="#" id="next-btn" class="page-btn" onclick="nextPage();">&gt;&gt;</a>
-        <select id="pageNum" onchange="SelectChanged(this)">
-            <option value="" selected="selected" autocomplete="off">#</option>
-            <option value="CPQDEAA" autocomplete="off">10</option>
-            <option value="COgHEAA" autocomplete="off">20</option>
-        </select>
-        <a href="#" id="last-btn" onclick="last();">Last (probably)</a>
-    </div>
-    <div id="wrapper"></div>
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="sand.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=load"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="perfect-scrollbar.min.js"></script>
+    <script src="sand.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=load"></script>
 </body>
 </html>
