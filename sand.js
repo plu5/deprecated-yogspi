@@ -77,7 +77,7 @@ $(document).on('click', '.wbtn', function() {
 
 function load() {
     if(sPage != "importExport.html") {
-        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk');
+        gapi.client.setApiKey('AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A');
         gapi.client.load('youtube', 'v3', makeRequest);
     }
 }
@@ -217,6 +217,7 @@ DropDown.prototype = {
         var obj = this;
         obj.dd.on('click', function(event){
             $(this).toggleClass('active');
+            $('.dropdown').perfectScrollbar('update');
             return;
         });
     }
@@ -225,9 +226,7 @@ $(function() {
     var dd = new DropDown( $('.dd') );
 });
 $(".dropdown").perfectScrollbar({
-    wheelSpeed: 0.5,
-    minScrollbarLength: 20,
-    suppressScrollX: true
+    wheelSpeed: 0.5
 })
 
 function importBtn(file) {
