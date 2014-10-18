@@ -104,7 +104,6 @@ table {
     height: 120px;
     min-width: 650px;
     margin-bottom: 6px;
-    margin-top: 6px;
     border-top: 3px solid #a7a7a7;
     border-radius: 10px;
     padding: 5px;
@@ -140,14 +139,18 @@ table {
 }
 
 #container {
-    padding-left: 175px;
+    padding-left: 170px;
     position: relative;
+}
+
+#wrapper {
+    padding:5px;
 }
 
 #sidebar {
     position: absolute;
     position: fixed !important;
-    margin-left: -175px;
+    margin-left: -170px;
     width: 170px;
 }
 
