@@ -80,7 +80,7 @@ $(document).on('click', '.wbtn', function() {
 
 function load() {
     if(sPage != "importExport.html") {
-        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk'/*'AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A'*/);
+        gapi.client.setApiKey('AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A');
         gapi.client.load('youtube', 'v3', makeRequest);
     }
 }
