@@ -240,7 +240,7 @@ table {
     width: 170px;
     /*position: fixed;*/
     top: 0px;
-    max-height: 400px;
+    max-height: 300px;
     overflow:hidden;
 }
 

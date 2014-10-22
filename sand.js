@@ -1,5 +1,5 @@
 var watchedList = [];
-var channelIds = ['UCH-_hzb2ILSCo9ftVSnrCIQ', 'UCj_dHQWv08dQ0fv6IrzTChQ', 'UCs4br3aZLU0sOEM-3n0-6xQ', 'UCD4INvKvy83OXwAkRjaQKtw', 'UCpu8dLHavjMi1a5jgT9ycMA', 'UCQd82ZrlW8b8_MujwDO9ajw', 'UCsLTG-svFzsK22zFac0pwUA', 'UCUxoapwoGN9cKN5SPKGVh7A', 'UCYzUOg9p-Z_1o_e-Ua4-VHQ', 'UCkcdIHabg9Sq0sD6ITyVQcg', 'UCVk6LHxQ4TnHySEd0e6143g', 'UCaGWSIZnljlgNTSMzYnxTEg'];
+var channelIds = ['UCH-_hzb2ILSCo9ftVSnrCIQ', 'UCj_dHQWv08dQ0fv6IrzTChQ', 'UCs4br3aZLU0sOEM-3n0-6xQ', 'UCD4INvKvy83OXwAkRjaQKtw', 'UCpu8dLHavjMi1a5jgT9ycMA', 'UCQd82ZrlW8b8_MujwDO9ajw', 'UCsLTG-svFzsK22zFac0pwUA', 'UCUxoapwoGN9cKN5SPKGVh7A', 'UCYzUOg9p-Z_1o_e-Ua4-VHQ', 'UCkcdIHabg9Sq0sD6ITyVQcg', 'UCVk6LHxQ4TnHySEd0e6143g', 'UCaGWSIZnljlgNTSMzYnxTEg', 'UCZ3edpZNi_qmuBG2FIHW5tQ'];
 var channelId;
 var isUploads = true;
 var sPath = window.location.pathname;
@@ -41,6 +41,9 @@ switch (sPage) {
 	case "tedhimself.html":
         channelId = channelIds[11];
         break;
+    case "doubledragon.html":
+        channelId = channelIds[12];
+        break;
 	case "index.html":
 	default:
         channelId = channelIds[0];
@@ -77,7 +80,7 @@ $(document).on('click', '.wbtn', function() {
 
 function load() {
     if(sPage != "importExport.html") {
-        gapi.client.setApiKey('AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A');
+        gapi.client.setApiKey('AIzaSyBBqdR1swLk35uPtsMS4-A37ypf5DfjWJk'/*'AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A'*/);
         gapi.client.load('youtube', 'v3', makeRequest);
     }
 }
@@ -168,6 +171,9 @@ function last() {
 		case "tedhimself.html":
 			requestVideoPlaylist(playlistId, 'CJYBEAA');
 			break;
+        case "doubledragon.html":
+            requestVideoPlaylist(playlistId);
+            break;
     }
 }
 function nextPage() {
@@ -215,9 +221,14 @@ function DropDown(el) {
 DropDown.prototype = {
     initEvents : function() {
         var obj = this;
-        obj.dd.on('click', function(event){
-            $(this).toggleClass('active');
+        obj.dd.on('mouseenter', function(event) {
+            clearTimeout(this.timer);
+            $(this).addClass('active');
             $('.dropdown').perfectScrollbar('update');
+            return;
+        });
+        obj.dd.on('mouseleave', function(event) {
+            if($('.dd').hasClass('active')){this.timer = setTimeout(function(){$('.dd').removeClass('active');}, 500)};
             return;
         });
     }
