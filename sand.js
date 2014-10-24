@@ -1,5 +1,5 @@
 var watchedList = [];
-var channelIds = ['UCH-_hzb2ILSCo9ftVSnrCIQ', 'UCj_dHQWv08dQ0fv6IrzTChQ', 'UCs4br3aZLU0sOEM-3n0-6xQ', 'UCD4INvKvy83OXwAkRjaQKtw', 'UCpu8dLHavjMi1a5jgT9ycMA', 'UCQd82ZrlW8b8_MujwDO9ajw', 'UCsLTG-svFzsK22zFac0pwUA', 'UCUxoapwoGN9cKN5SPKGVh7A', 'UCYzUOg9p-Z_1o_e-Ua4-VHQ', 'UCkcdIHabg9Sq0sD6ITyVQcg', 'UCVk6LHxQ4TnHySEd0e6143g', 'UCaGWSIZnljlgNTSMzYnxTEg', 'UCZ3edpZNi_qmuBG2FIHW5tQ'];
+var channelIds = ['UCH-_hzb2ILSCo9ftVSnrCIQ', 'UCj_dHQWv08dQ0fv6IrzTChQ', 'UCs4br3aZLU0sOEM-3n0-6xQ', 'UCD4INvKvy83OXwAkRjaQKtw', 'UCpu8dLHavjMi1a5jgT9ycMA', 'UCQd82ZrlW8b8_MujwDO9ajw', 'UCsLTG-svFzsK22zFac0pwUA', 'UCUxoapwoGN9cKN5SPKGVh7A', 'UCYzUOg9p-Z_1o_e-Ua4-VHQ', 'UCkcdIHabg9Sq0sD6ITyVQcg', 'UCVk6LHxQ4TnHySEd0e6143g', 'UCaGWSIZnljlgNTSMzYnxTEg', 'UCZ3edpZNi_qmuBG2FIHW5tQ', 'UCNBwxPqzdZeLGv8SPoosjNg'];
 var channelId;
 var isUploads = true;
 var sPath = window.location.pathname;
@@ -43,6 +43,9 @@ switch (sPage) {
         break;
     case "doubledragon.html":
         channelId = channelIds[12];
+        break;
+    case "civilization.html":
+        channelId = channelIds[13];
         break;
 	case "index.html":
 	default:
@@ -174,6 +177,9 @@ function last() {
         case "doubledragon.html":
             requestVideoPlaylist(playlistId);
             break;
+        case "civilization.html":
+            requestVideoPlaylist(playlistId);
+            break;
     }
 }
 function nextPage() {
@@ -237,7 +243,8 @@ $(function() {
     var dd = new DropDown( $('.dd') );
 });
 $(".dropdown").perfectScrollbar({
-    wheelSpeed: 0.5
+    wheelSpeed: 0.5,
+    suppressScrollX: true
 })
 
 function importBtn(file) {
