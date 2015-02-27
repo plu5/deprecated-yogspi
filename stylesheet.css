@@ -26,8 +26,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	max-width: 1300px;
-	margin: 0 auto;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
 	background: #fafafa;
+    display: block;
 }
 ol, ul {
 	list-style: none;
@@ -103,6 +106,7 @@ table {
     background: #dedede;
     height: 120px;
     min-width: 650px;
+    max-width: 1120px;
     margin-bottom: 6px;
     border-top: 3px solid #a7a7a7;
     border-radius: 10px;
@@ -140,7 +144,7 @@ table {
 
 #container {
     padding-left: 170px;
-    position: relative;
+    /*position: relative;*/
 }
 
 #wrapper {
@@ -152,6 +156,8 @@ table {
     position: fixed !important;
     margin-left: -170px;
     width: 170px;
+    font-family: Times New Roman;
+    font-size: 14px;
 }
 
 #sidebar a {
