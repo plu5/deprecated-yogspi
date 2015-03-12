@@ -55,6 +55,10 @@ switch (sPage) {
 var playlistId, nextPageToken, prevPageToken;
 if(localStorage['watchedList'] != null) watchedList = JSON.parse(localStorage['watchedList']);
 
+$(window).resize(function() {
+    $('#sidebar').perfectScrollbar('update');
+});
+
 $(document).on('mouseenter', '.wbtn', function() {
     if ($(this).hasClass('wbtn-selected')) {
         $(this).addClass('wbtn-remove');
@@ -83,7 +87,7 @@ $(document).on('click', '.wbtn', function() {
 
 function load() {
     if(sPage != "importExport.html") {
-        gapi.client.setApiKey('AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A');
+        gapi.client.setApiKey(('AIzaSyAUlITcOAIzYKB9b4fE73sCVsgVgpNPz2A'));
         gapi.client.load('youtube', 'v3', makeRequest);
     }
 }
@@ -231,10 +235,11 @@ DropDown.prototype = {
             clearTimeout(this.timer);
             $(this).addClass('active');
             $('.dropdown').perfectScrollbar('update');
+            $('#sidebar').css({'overflow':'visible'});
             return;
         });
         obj.dd.on('mouseleave', function(event) {
-            if($('.dd').hasClass('active')){this.timer = setTimeout(function(){$('.dd').removeClass('active');}, 500)};
+            if($('.dd').hasClass('active')){this.timer = setTimeout(function(){$('.dd').removeClass('active');$('#sidebar').css({'overflow':'hidden'});}, 500)};
             return;
         });
     }
@@ -243,6 +248,10 @@ $(function() {
     var dd = new DropDown( $('.dd') );
 });
 $(".dropdown").perfectScrollbar({
+    wheelSpeed: 0.5,
+    suppressScrollX: true
+})
+$("#sidebar").perfectScrollbar({
     wheelSpeed: 0.5,
     suppressScrollX: true
 })
