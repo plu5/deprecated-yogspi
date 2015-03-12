@@ -74,14 +74,14 @@ table {
 
 .v-title {
     font-family: Oswald;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 0;
-    height: 33px;
+    height: 23px;
     overflow: hidden;
 }
 
 .v-url {
-    color: #b71b16;
+    color: #444444;
 }
 
 .v-date {
@@ -89,16 +89,17 @@ table {
     font-family: Consolas, Arial;
     font-size: 10px;
     font-style: italic;
-    margin-top: 73px;
+    margin-top: 85px;
     margin-right: -20em;
 }
 
 .v-desc {
     font-family: Oswald;
     font-weight: 300;
-    font-style: italic;
-    height: 83px;
-    line-height: 130%;
+    color: #444444;
+    margin-top: 3px;
+    height: 88px;
+    line-height: 140%;
     overflow: hidden;
 }
 
@@ -126,11 +127,21 @@ table {
     background-color: white;
 }
 
+/*#sidecontainer {position:fixed !important;*/
+    /*position: absolute;*/
+    /*position: fixed !important;*/
+    /*margin-left: -170px;*/
+    /*width: 170px;*/
+/*}*/
+
 #btn-container {
     text-align: center;
-    background: #b71b16;
+    background: darkgrey;
     font-family: Consolas, Arial;
     font-size: 14px;
+    /*width:170px;*/
+    /*margin-left:-170px;*/
+
 }
 
 #btn-container a {
@@ -152,12 +163,15 @@ table {
 }
 
 #sidebar {
-    position: absolute;
-    position: fixed !important;
-    margin-left: -170px;
-    width: 170px;
+    position:fixed;
     font-family: Times New Roman;
     font-size: 14px;
+    /*min-height: 200px;*/
+    /*max-height: 100%;*/
+    height: 100%;
+    overflow: hidden;
+    width: 170px;
+    margin-left: -170px;
 }
 
 #sidebar a {
@@ -169,7 +183,7 @@ table {
     width: 150px;
     padding: 10px;
     margin: 0 auto;
-    background: #b71b16;
+    background: darkgrey;
     color: #fff;
     outline: none;
     cursor: pointer;
@@ -177,7 +191,7 @@ table {
 }
 
 .wrapper-dropdown:hover {
-    background: red;
+    background: grey;
 }
 
 .wrapper-dropdown a {
@@ -190,7 +204,7 @@ table {
     width: 150px;
     padding: 10px;
     margin: 0 auto;
-    background: #b71b16;
+    background: darkgrey;
     color: #fff;
     outline: none;
     cursor: pointer;
@@ -198,7 +212,7 @@ table {
 }
 
 .wrapper-dropdown-1:hover {
-    background: red;
+    background: grey;
 }
 
 .wrapper-dropdown-1:after {
@@ -301,3 +315,5 @@ h2 {font-family: Consolas; font-size: 20px; padding: 5px;}
 }
 
 .wrapper-dropdown-current:hover {background:grey;}
+
+.channelLink {font-style: italic;}
